@@ -4,17 +4,24 @@ Speako is a lightweight Windows tray app that turns speech into polished text or
 
 ## Screenshots
 
-### Recording
-
-![Recording and preset chooser](docs/screenshots/recording.png)
-
-### Settings
-
-<p align="center">
-  <img src="docs/screenshots/general-settings.png" alt="General settings" width="260">
-  <img src="docs/screenshots/presets.png" alt="Preset list" width="260">
-  <img src="docs/screenshots/pipeline-editor.png" alt="Pipeline editor" width="260">
-</p>
+<table>
+  <tr>
+    <th>Recording and preset chooser</th>
+    <th>General settings</th>
+  </tr>
+  <tr>
+    <td><a href="docs/screenshots/recording.png"><img src="docs/screenshots/recording.png" alt="Recording and preset chooser" width="360"></a></td>
+    <td><a href="docs/screenshots/general-settings.png"><img src="docs/screenshots/general-settings.png" alt="General settings" width="360"></a></td>
+  </tr>
+  <tr>
+    <th>Preset list</th>
+    <th>Pipeline editor</th>
+  </tr>
+  <tr>
+    <td><a href="docs/screenshots/presets.png"><img src="docs/screenshots/presets.png" alt="Preset list" width="360"></a></td>
+    <td><a href="docs/screenshots/pipeline-editor.png"><img src="docs/screenshots/pipeline-editor.png" alt="Pipeline editor" width="360"></a></td>
+  </tr>
+</table>
 
 ## Features
 
