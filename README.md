@@ -42,11 +42,17 @@ Speako is a lightweight Windows tray app that turns speech into polished text or
 ## Setup
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -e ".[dev]"
-Copy-Item .env.example .env
+powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
 ```
+
+Setup creates an isolated `.venv`, installs Speako and its dependencies there,
+and creates or updates the **Speako** Desktop shortcut. It preserves an existing
+`.env`. No environment activation or global Python packages are needed.
+Python itself must remain installed. Rerun setup after moving the project;
+recreate `.venv` if you move it or replace its base Python installation.
+
+To select a particular Python installation, append `-Python "C:\Python313\python.exe"`.
+For development and tests, append `-Dev`.
 
 Add your key to `.env`:
 
@@ -54,11 +60,22 @@ Add your key to `.env`:
 OPENAI_API_KEY=your-api-key
 ```
 
-Then start Speako:
+Then double-click **Speako** on your Desktop. To start it with a console for
+troubleshooting, run from the project directory:
 
 ```powershell
-python -m speako
+.\.venv\Scripts\python.exe -I -m speako
 ```
+
+Run tests after setup with `-Dev`:
+
+```powershell
+.\.venv\Scripts\python.exe -I -m pytest
+```
+
+Keep `.venv` out of Git and archive backups; recreate it with setup when needed.
+The shortcut uses this environment exclusively, ignoring user-installed packages
+and Python environment-variable overrides.
 
 ## Usage
 
